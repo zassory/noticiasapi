@@ -1,10 +1,17 @@
+import { Container , Grid , Typography } from '@mui/material';
 
 
 function App() {
   
 
   return (
-   <h1>App Noticias</h1>
+   <Container>
+    <header>
+      <Typography align='center' marginY={5} component="h1" variant="h3">
+        Buscador de Noticias
+      </Typography>
+    </header>
+   </Container>
   )
 }
 
