@@ -1,13 +1,15 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+
 import { Noticia } from "./Noticia";
 import { useNoticias } from "../hooks/useNoticias";
 
 export const ListadoNoticias = () => {
 
   const { noticias } = useNoticias();
-
-  console.log(noticias);
+  //console.log(noticias);
 
   return (
     <>
@@ -29,6 +31,18 @@ export const ListadoNoticias = () => {
                 noticia={noticia}
             />))}
         </Grid>
+
+        <Stack
+            sx={{
+                marginY:5
+            }}
+            spacing={2}
+            direction={'row'}
+            justifyContent='center'
+            alignItems='center'
+        >
+            <Pagination count={10} color="primary" />        
+        </Stack>
     </>
   )
 }
